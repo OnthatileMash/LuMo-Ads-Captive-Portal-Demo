@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!--
+  LuMo Ads -- MikroTik Hotspot external-login redirect stub.
+
+  This file replaces /hotspot/login.html ON THE ROUTER (upload via Winbox
+  Files, or FTP into the router). It is served BY ROUTEROS, which is what
+  lets the $(...) placeholders below get substituted with the real
+  session's mac / ip / login-submit URL before the browser ever sees them.
+
+  It does nothing except immediately bounce the client to the real LuMo
+  portal, carrying those values along as query parameters.
+-->
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>LuMo Wi-Fi</title>
+</head>
+<body>
+  <script>
+    // EDIT this if the portal server's address/port changes:
+    var PORTAL_URL = "http://192.168.0.240:3000/index.html";
+
+    var target = PORTAL_URL
+      + "?mac=$(mac)"
+      + "&ip=$(ip)"
+      + "&link-login-only=$(link-login-only)"
+      + "&link-orig=$(link-orig-esc)"
+      + "&error=$(error)";
+
+    window.location.replace(target);
+  </script>
+  <noscript>
+    <meta http-equiv="refresh"
+      content="0; url=http://192.168.0.5:3000/index.html?mac=$(mac)&ip=$(ip)&link-login-only=$(link-login-only)&link-orig=$(link-orig-esc)&error=$(error)">
+    <p>Continue to <a href="http://192.168.0.5:3000/index.html">LuMo Wi-Fi</a>.</p>
+  </noscript>
+</body>
+</html>

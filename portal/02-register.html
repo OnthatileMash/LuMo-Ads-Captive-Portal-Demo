@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Register · LuMo Wi-Fi</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+<body>
+    <div class="shell">
+<header class="portal-header">
+    <a class="brand" href="index.html" aria-label="LuMo Ads home">
+        <img class="brand-logo" src="assets/LumoAds Logo.png" alt="LuMo Ads — Making advertising fashionable"></a>
+        <div class="network-chip">Step 1 of 3</div>
+    </header>
+<main class="main">
+    <section class="card">
+<div class="progress"><span class="active"></span>
+    <span></span>
+    <span></span>
+</div>
+<div class="page-kicker">Registration</div>
+<h2>Let’s get you connected.</h2>
+<p class="lead">These details help us provide the Wi-Fi service and measure the service responsibly.</p>
+<form class="form-grid" data-register-form>
+<div class="field"><label for="name">Full name</label>
+    <input id="name" name="name" autocomplete="name" required placeholder="Your full name"></div>
+<div class="field"><label for="phone">Mobile number</label>
+    <input id="phone" name="phone" inputmode="tel" autocomplete="tel" required placeholder="e.g. 082 123 4567"></div>
+<div class="field"><label for="email">Email address</label>
+    <input id="email" name="email" type="email" autocomplete="email" required placeholder="you@example.com"></div>
+<div class="field"><label for="id">ID number</label>
+    <input id="id" name="id" inputmode="numeric" autocomplete="off" required placeholder="13-digit South African ID"></div>
+<div class="helper">Your ID number is processed by the LuMo backend to validate the registration and derive permitted demographic categories for the service.</div>
+<div class="actions"><button class="btn btn-primary" type="submit">Continue</button>
+    <button class="btn btn-text" type="button" onclick="go('index.html')">Back</button></div>
+</form>
+</section>
+</main>
+<footer class="footer">Your information is protected using LuMo Ads' security controls.</footer>
+<script src="app.js"></script>
+</div>
+</body>
+</html>
