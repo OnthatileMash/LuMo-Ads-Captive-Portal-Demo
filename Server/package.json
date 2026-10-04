@@ -1,0 +1,12 @@
+{
+  "name": "lumo-captive-portal-server",
+  "version": "0.1.0",
+  "description": "Minimal backend for the LuMo Ads captive portal demo (registration, consent, ad-gate, MikroTik hand-off).",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
